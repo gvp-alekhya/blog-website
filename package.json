@@ -1,11 +1,16 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.241.0",
+    "@aws-sdk/client-s3": "^3.238.0",
+    "aws-sdk": "^2.1286.0",
+    "axios": "^1.2.1",
+    "cross-env": "^7.0.3",
     "date": "^2.0.2",
     "date-fns": "^2.29.3",
     "fs": "^0.0.1-security",
