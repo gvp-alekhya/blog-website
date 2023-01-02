@@ -6,6 +6,9 @@ body {
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
+  background-image: url(../public/images/tiruppavai-bg.jpg);
+  background-size: cover;
+
 }
 
 * {
@@ -25,6 +28,7 @@ img {
   max-width: 100%;
   display: block;
 }
+
 h1,
 h2,
 p,

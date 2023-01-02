@@ -4,10 +4,11 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
-const name = 'Aandal Tiruppavai';
+
 export const siteTitle = 'Tiruppavai';
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, title }) {
+  let name = title || 'Aandal Tiruppavai';
   return (
     <div className={styles.container}>
       <Head>
@@ -37,6 +38,7 @@ export default function Layout({ children, home }) {
               alt="Aandal Tiruppavai"
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <button class="btn btn-info">Add Content</button>
           </>
         ) : (
           <>
@@ -51,19 +53,14 @@ export default function Layout({ children, home }) {
               />
             </Link>
             <h2 className={utilStyles.headingLg}>
-              <Link href="/" className={utilStyles.colorInherit}>
-                {name}
-              </Link>
+
+              {name}
+
             </h2>
           </>
         )}
       </header>
       <main>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">← Back to home</Link>
-        </div>
-      )}
     </div>
   );
 }

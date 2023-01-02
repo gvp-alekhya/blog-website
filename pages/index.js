@@ -15,15 +15,8 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <p>Hello, I am Alekhya Oruganti, a software engineer.
-          <a href="https://www.linkedin.com/in/alekhya-oruganti-b13026108/">
-            You can contact me on LinkedIn
-          </a>
-        </p>
-      </section>
+
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map((item) => (
            // <li>{JSON.stringify(item)}</li>
@@ -35,7 +28,7 @@ export default function Home({ allPostsData }) {
           ))}
         </ul>
       </section>
-
+          
     </Layout>
   );
 }
