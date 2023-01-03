@@ -92,7 +92,7 @@ export default function CreateContent({ postData }) {
                     name="video"
                     onChange={handleChange}
                 />
-                <button type="submit" class="btn btn-primary" >Submit</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </Layout>
     )
