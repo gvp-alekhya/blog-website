@@ -38,7 +38,7 @@ export default function Layout({ children, home, title }) {
               alt="Aandal Tiruppavai"
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
-            <button class="btn btn-info">Add Content</button>
+            <Link href="/posts/createContent" class="btn btn-info">Add Content</Link>
           </>
         ) : (
           <>

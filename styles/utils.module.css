@@ -50,3 +50,13 @@
   .lightText {
     color: #666;
   }
+
+  .createForm{
+    
+      width: 50%;
+      margin-left: 30%;
+
+  }
+  .submitBtn{
+    margin-top: 15px;
+  }

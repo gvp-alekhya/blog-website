@@ -6,9 +6,11 @@ export default function Blog({ data }) {
         <>
             <div class="container">
                 <div class="row">
-                <div class="col-6" ><Image src={data.imageUrl} alt="Picture of the author" width={500} height={500} /></div>
-                <div class="col-6" ><video src={data.videoUrl} controls />  <p>{data.description}</p></div>
-
+                {data.imageUrl ?<div class="col-6" ><Image src={data.imageUrl} alt="Picture of the author" width={500} height={500} /></div>:null}
+                <div class="col-6" >
+                {data.videoUrl?  <video src={data.videoUrl} controls />:null}
+                 {data.description ? <p>{data.description}</p>:null}
+                 </div>
                 </div>
                
             </div>
