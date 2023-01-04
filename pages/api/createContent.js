@@ -24,11 +24,8 @@ export default async function createContent(req, res) {
 
     let formData = req.body, item = {
         name: formData.title,
-        image: "Post/" + formData.image.name,
-        video: "Audio/" + formData.video.name,
         description: formData.description
     }
-    let title, image, descritpion, video;
     if (req.body.image) {
         var buf = Buffer.from(req.body.image.base64.replace(/^data:image\/\w+;base64,/, ""), 'base64')
         var data = {
@@ -51,7 +48,7 @@ export default async function createContent(req, res) {
     if (req.body.video) {
         var buf = Buffer.from(req.body.video.base64.replace(/^data:image\/\w+;base64,/, ""), 'base64')
         var data = {
-            Key: "Video/" + formData.video.name,
+            Key: "Audio/" + formData.video.name,
             Body: buf,
             ContentEncoding: 'base64',
             ContentType: formData.video.type,
@@ -81,7 +78,7 @@ export default async function createContent(req, res) {
         }
       });
 
-    res.send("Success");
+      res.status(200).json({ success: "success" })
 };
 
 

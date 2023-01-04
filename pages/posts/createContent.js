@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Layout from '../../components/layout';
 
 import utilStyles from '../../styles/utils.module.css';
+import Router from 'next/router'
 
 export default function CreateContent({ postData }) {
     const [formData, setFormData] = useState({
@@ -58,7 +59,7 @@ export default function CreateContent({ postData }) {
             },
         });
         res.json().then((s, e) => {
-            debugger
+            Router.push('/');
         });
 
     }
